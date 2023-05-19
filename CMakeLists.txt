@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.22.0)
+project(MathPower)
+add_library(MathPowerStaticLib STATIC MathPower.h MathPower.cpp)
+add_executable(MathPowerExe MathPowerClient.cpp)
+target_link_libraries(MathPowerExe MathPowerStaticLib)
